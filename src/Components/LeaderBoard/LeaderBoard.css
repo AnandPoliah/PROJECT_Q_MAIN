@@ -1,0 +1,128 @@
+/* Container for the entire leaderboard */
+.leaderboard-container {
+  background: linear-gradient(135deg, #1e1e1e, #3c3c3c);
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  color: #ffffff;
+  width: 100%; /* Ensure the container spans the full width */
+  box-sizing: border-box; /* Include padding and border in width calculations */
+}
+
+/* Content area styling */
+.leaderboard-content {
+  max-width: 100%; /* Ensure the content area spans full width */
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Header styling */
+.leaderboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Navbar container */
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+/* Filters styling */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filter {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.filter select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  font-size: 1rem;
+  color: #000000;
+  width: 100%; /* Ensure dropdowns take full width */
+}
+
+/* Table styling */
+.table-wrapper {
+  overflow-x: auto; /* Add horizontal scroll for small screens */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.table th {
+  font-weight: 600;
+  color: black;
+
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+  .leaderboard-container {
+    width: 200%;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    color: #ffffff;
+  }
+  
+  /* Content area styling */
+  .leaderboard-content {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .table-wrapper {
+    overflow-x: auto; /* Ensure horizontal scroll on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-header {
+    font-size: 1.5rem;
+  }
+
+  .filter select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}

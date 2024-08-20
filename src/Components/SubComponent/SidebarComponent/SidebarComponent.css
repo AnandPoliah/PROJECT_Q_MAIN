@@ -1,0 +1,203 @@
+/* Sidebar toggle icon */
+.sidebar-toggle-icon {
+  font-size: 2rem;
+  color: #0066cc;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+}
+
+/* Sidebar container */
+.sidebar {
+  background-color: #333333de;
+  color: white;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: -250px; /* Hide the sidebar initially */
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+/* Sidebar open state */
+.sidebar.open {
+  left: 0; /* Show the sidebar when open */
+}
+
+/* Brand section */
+.sidebar-brand {
+  margin-bottom: 2rem;
+}
+
+.sidebar-brand h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Sidebar menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar-menu li {
+  width: 100%;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.sidebar-link:hover {
+  background-color: #0066cc;
+}
+
+.sidebar-icon {
+  font-size: 1.2rem;
+}
+
+.sidebar-text {
+  flex-grow: 1;
+  margin-left: 1rem;
+}
+
+.sidebar-badge {
+  background-color: #e53e3e;
+  color: white;
+  border-radius: 12px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Teams section */
+.sidebar-teams {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.sidebar-teams h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-teams ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-teams li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-teams a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-teams a:hover {
+  background-color: #373c77;
+}
+
+/* Profile section */
+.sidebar-profile {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-profile-icon {
+  font-size: 1.5rem;
+}
+
+.sidebar-profile-name {
+  margin-left: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) 
+{
+  .sidebar-toggle-icon 
+  {
+    font-size: 2rem;
+    color: #0066cc;
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    left: 0.5rem;
+    z-index: 1000;
+  }
+  
+  .sidebar {
+      width: 200px; /* Adjust width for larger tablets and small desktops */
+  }
+
+  .sidebar-brand h2 {
+      font-size: 1.25rem; /* Slightly smaller font size */
+  }
+
+  .sidebar-link {
+      padding: 0.75rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+      width: 180px; /* Adjust width for tablets */
+  }
+
+  .sidebar-brand h2 {
+      font-size: 1.2rem; /* Smaller font size for tablets */
+  }
+
+  .sidebar-link {
+      padding: 0.5rem; /* Reduced padding for tablets */
+  }
+
+  .sidebar-icon {
+      font-size: 1rem; /* Adjust icon size for tablets */
+  }
+}
+
+@media (max-width: 768px)
+{
+  .sidebar {
+      height: 100vh; /* Full height for mobile */
+      left: -100%; /* Hide sidebar initially for mobile */
+  }
+
+  
+  .sidebar-brand {
+      margin-bottom: 1rem; /* Adjust margin for mobile */
+  }
+
+  .sidebar-brand h2 {
+      font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .sidebar-link {
+      padding: 0.5rem; /* Adjust padding for mobile */
+  }
+
+  .sidebar-icon {
+      font-size: 0.9rem; /* Smaller icon size for mobile */
+  }
+}

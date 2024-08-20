@@ -1,0 +1,129 @@
+/* src/components/Footer.css */
+
+.nt-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.nt-footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 20px; /* Added gap for consistent spacing between sections */
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) { /* sm */
+    .nt-footer-content {
+        flex-direction: row;
+    }
+
+    .nt-footer-content > div {
+        flex: 1 1 45%; /* Each section takes about 45% of the width */
+        max-width: 300px;
+        margin: 10px auto; /* Center the sections */
+    }
+}
+
+@media (min-width: 768px) { /* md */
+    .nt-footer-content > div {
+        flex: 1 1 30%; /* Adjust for larger screens */
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 1024px) { /* lg */
+    .nt-footer-content {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+        justify-content: space-evenly; /* Distribute space evenly */
+    }
+
+    .nt-footer-content > div {
+        flex: 1 1 22%; /* Reduce width to fit more items in a row */
+    }
+}
+
+.nt-contact h2, .nt-social h2, .nt-about h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.nt-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nt-social h2 {
+    margin-bottom: 15px;
+}
+
+.nt-social-links {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 20px; /* Space between icons */
+}
+
+.nt-social-links a {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+}
+
+.nt-social-links img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain; /* Ensure the image scales correctly */
+}
+
+.nt-footer-bottom {
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+/* Modal styles */
+.nt-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.nt-modal {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.nt-modal h2 {
+    margin-bottom: 15px;
+}
+
+.nt-modal button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nt-modal button:hover {
+    background-color: #555;
+}

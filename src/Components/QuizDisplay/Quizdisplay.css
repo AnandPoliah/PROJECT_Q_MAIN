@@ -1,0 +1,186 @@
+/* General Styles */
+.quiz-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 1rem; /* Ensure padding on all devices */
+}
+
+.header-for-title {
+  width: 100%;
+  background-color: #0066cc;
+  color: #fff;
+  padding: 1rem; /* Increase padding for better visual balance */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 2rem; /* Add spacing below the header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Container for quiz cards */
+.quiz-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+/* Quiz Card */
+.quiz-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  padding: 1rem; /* Add padding to cards for consistency */
+}
+
+/* Hover effect for quiz cards */
+.quiz-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Quiz Card Image */
+.quiz-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Content within quiz card */
+.quiz-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title in quiz card */
+.quiz-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem; /* Space below the title */
+}
+
+/* Description in quiz card */
+.quiz-card-description {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1rem; /* Space below the description */
+}
+
+/* Button in quiz card */
+.quiz-card-button {
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem; /* Adjust padding for balance */
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-card-button:hover {
+  background-color: #005bb5;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+
+/* For Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-for-title {
+    padding: 1rem; /* Consistent padding for tablets */
+    margin-bottom: 1.5rem; /* Reduced margin below header for tablets */
+  }
+
+  .header-title {
+    font-size: 1.8rem; /* Adjust font size for tablets */
+  }
+
+  .quiz-cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Keep flexible card sizing */
+  }
+
+  .quiz-card {
+    padding: 1.5rem; /* Adjust padding for tablets */
+  }
+
+  .quiz-card-title {
+    font-size: 1.4rem; /* Adjust font size for tablets */
+  }
+
+  .quiz-card-button {
+    font-size: 1rem; /* Adjust font size for buttons on tablets */
+    padding: 0.5rem 1rem; /* Adjust padding for tablets */
+  }
+}
+
+/* For Mobile Phones */
+@media (max-width: 600px) {
+  .quiz-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-card {
+    padding: 2rem; /* Increase padding for mobile */
+  }
+
+  .header-for-title {
+    width: 90%; /* Adjust width for mobile */
+    padding: 1rem; /* Increase padding for mobile */
+    margin-bottom: 1rem; /* Reduce margin below header for mobile */
+  }
+
+  .header-title {
+    font-size: 1.6rem; /* Smaller font size for mobile */
+  }
+
+  .quiz-card-title {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+
+  .quiz-card-button {
+    font-size: 0.9rem; /* Smaller font size for button on mobile */
+    padding: 0.5rem; /* Increase padding for button on mobile */
+  }
+}
+
+/* For Large Desktops */
+@media (min-width: 1200px) {
+  .quiz-cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Larger cards for large desktops */
+  }
+
+  .header-title {
+    font-size: 2.5rem; /* Larger font size for large screens */
+  }
+
+  .quiz-card-title {
+    font-size: 1.8rem; /* Larger font size for large screens */
+  }
+
+  .quiz-card-button {
+    font-size: 1.2rem; /* Larger font size for buttons on large screens */
+    padding: 0.75rem 1.5rem; /* Increase padding for buttons on large screens */
+  }
+}

@@ -1,0 +1,201 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.outerdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.innerdiv {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px; /* Padding for all devices */
+  width: 90%; /* Default width for mobile */
+  max-width: 500px; /* Max-width for larger screens */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.innerdiv01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Margin for spacing between image and form */
+}
+
+.imgsrc {
+  width: 150px; /* Default image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.innerdiv02 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.outerform {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input {
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 12px;
+  background-color: #c4c3c3;
+  font-size: 16px;
+  color: #060606;
+  border-style: inset;
+  border-radius: 8px;
+}
+
+.button-63 {
+  align-items: center;
+  background-image: linear-gradient(135deg, #6a1b9a 0%, #2a3eb1 50%, #d1e4f2 100%);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  padding: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-63:hover {
+  background-color: #5b2a6f; /* Darker gradient for hover */
+  transform: scale(1.02);
+}
+
+.signup-login {
+  padding-top: 10px;
+  text-align: center;
+  color: #333;
+}
+
+.signup-login p {
+  margin: 0;
+}
+
+.signup-button {
+  background: none;
+  border: none;
+  color: #0066cc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.notification {
+  position: fixed;
+  width: 80%; /* Reduce width to avoid big notification */
+  max-width: 300px; /* Fixed max-width for notifications */
+  background-color: #333;
+  color: #fff;
+  padding: 8px 15px; /* Adjust padding for better size */
+  border-radius: 8px;
+  z-index: 9999;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Reduce font size */
+}
+
+.notification.success {
+  color: white;
+  font-size: 20px;
+  background-color: #4caf50; /* Green for success */
+}
+
+.notification.error {
+  color: white;
+  font-size: 20px;
+  background-color: #f44336; /* Red for error */
+}
+
+/* Mobile styles (less than 768px) */
+@media (max-width: 767px) {
+  .innerdiv {
+    width: 150%; /* Full width on mobile devices */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .imgsrc {
+    width: 190px; /* Smaller image size for mobile devices */
+  }
+
+  .input {
+    font-size: 12px; /* Smaller font size for mobile devices */
+  }
+
+  .button-63 {
+    font-size: 16px; /* Smaller font size for buttons */
+    padding: 10px; /* Adjust padding for mobile devices */
+  }
+
+  .notification {
+    width: 90%; /* Ensure notifications fit on mobile screens */
+    max-width: 250px; /* Further reduce max-width for mobile */
+    padding: 6px 12px; /* Adjust padding for mobile notifications */
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+}
+
+/* Tablet styles (768px and up) */
+@media (min-width: 768px) {
+  .innerdiv {
+    flex-direction: row;
+    width: 80%; /* Increase width for tablets */
+  }
+
+  .innerdiv01, .innerdiv02 {
+    width: 50%;
+    padding: 20px; /* Padding for larger screens */
+  }
+
+  .imgsrc {
+    width: 200px; /* Increase image size for larger screens */
+  }
+
+  .input {
+    font-size: 18px; /* Larger font size for larger screens */
+  }
+
+  .button-63 {
+    font-size: 20px; /* Larger font size for buttons */
+  }
+}
+
+/* Desktop styles (1024px and up) */
+@media (min-width: 1024px) {
+  .innerdiv {
+    width: 60%; /* Increase width for desktops */
+  }
+
+  .imgsrc {
+    width: 250px; /* Further increase image size for large screens */
+  }
+
+  .input {
+    font-size: 20px; /* Larger font size for larger screens */
+  }
+
+  .button-63 {
+    font-size: 22px; /* Larger font size for buttons */
+    padding: 15px; /* Increased padding for larger screens */
+  }
+}

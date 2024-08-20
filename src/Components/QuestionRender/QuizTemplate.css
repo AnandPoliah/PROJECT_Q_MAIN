@@ -1,0 +1,244 @@
+/* General container styles */
+.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding-bottom: 60px;
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+}
+
+/* BigDiv container styles */
+.BigDiv {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 60vh;
+  max-width: 1200px;
+  background-color: #9dceff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative; /* Needed for absolute positioning of timer */
+}
+
+/* Timer container styling */
+.timer-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+  color: #000000; /* Adjust color to ensure visibility against background */
+}
+
+/* Header styling */
+.quiz-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.quiz-subheader {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+/* Styling for BigDiv01 and its inner elements */
+.BigDiv01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  height: 50%;
+  color: #333;
+}
+
+.BigDiv0101 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Styling for BigDiv02 and its inner elements */
+.BigDiv02 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50%;
+  padding: 20px;
+}
+
+.BigDiv0201 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  background-color: #f0f1f0;
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  overflow: hidden; /* Hide overflow text */
+  text-align: center; /* Center align text */
+}
+
+.BigDiv020101 {
+  font-size: 1rem; /* Adjust font size to fit the container */
+  font-weight: 600; /* Ensure the text is bold if needed */
+  word-wrap: break-word; /* Ensure long words wrap */
+  padding: 10px; /* Add padding to prevent text from touching the edges */
+}
+
+.BigDiv0201.selected {
+  background-color: #090089;
+  color: #fff;
+}
+
+.BigDiv020101 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Button styling */
+.button-next {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0px 15px;
+  text-align: center;
+  transition: transform 0.6s ease, box-shadow 0.7s ease;
+  width: 100%;
+  min-height: 45px;
+}
+
+.button-next:hover {
+  box-shadow: rgba(35, 35, 35, 0.351) 0px 15px 15px;
+  transform: translateY(-3px) scale(1.02);
+}
+
+.button-next:active {
+  box-shadow: #1e231c;
+  transform: translateY(0);
+}
+
+.button-next:disabled {
+  pointer-events: none;
+}
+
+/* Correct and incorrect options */
+.BigDiv0201.correct {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.BigDiv0201.incorrect {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+
+/* Responsive Styles */
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .BigDiv {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .BigDiv01, .BigDiv02 {
+    flex-direction: column;
+  }
+
+  .BigDiv0201 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .BigDiv0201:last-child {
+    margin-bottom: 0;
+  }
+}
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .total {
+    padding-bottom: 10px;
+    min-height: 50px;
+  }
+
+  .BigDiv {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+  }
+
+  .BigDiv01 {
+    padding: 20px;
+    height: auto;
+  }
+
+  .BigDiv0101 {
+    font-size: 1.2rem; /* Adjust font size for mobile */
+  }
+
+  .BigDiv02 {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Ensure options stretch to fill available width */
+    height: auto;
+    padding: 10px 0; /* Add vertical padding, no horizontal padding */
+    gap: 10px; /* Space between options */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+  }
+
+  .BigDiv0201 {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height based on content */
+    background-color: #f0f1f0;
+    border-radius: 20px;
+    margin: 0; /* Remove margin to use gap for spacing */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Hide overflow text */
+    text-align: center; /* Center align text */
+    padding: 15px; /* Add padding inside the options */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+  }
+
+  .BigDiv020101 {
+    font-size: 1rem; /* Adjust font size to fit the container */
+    font-weight: 600; /* Ensure the text is bold if needed */
+    word-wrap: break-word; /* Ensure long words wrap */
+  }
+
+  .button-next {
+    font-size: 16px;
+    padding: 0px 10px;
+  }
+}
+

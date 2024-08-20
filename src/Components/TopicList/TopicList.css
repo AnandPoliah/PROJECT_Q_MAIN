@@ -1,0 +1,118 @@
+/* General Styles */
+
+.nt-home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; /* Ensure container takes at least the full viewport height */
+  box-sizing: border-box; /* Include padding and borders in width/height */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+
+.nt-content {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 40px;
+  text-align: center;
+  padding-bottom: 20px; /* Prevent content from being clipped */
+  box-sizing: border-box; /* Include padding in width/height */
+
+}
+
+.nt-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.nt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted for better responsiveness */
+  gap: 5%;
+  margin-bottom: 5%;
+}
+
+.nt-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box; /* Include padding and borders in width/height */
+  overflow: hidden; /* Prevent content from spilling outside */
+}
+
+.nt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nt-icon {
+  border-radius: 10px;
+  width: 80%; /* Ensure the icon fits the card width */
+  height: 150px; /* Adjust height to fit within the card */
+  object-fit: contain; /* Ensure the image fits within the container without distortion */
+}
+
+.nt-card-content {
+  text-align: center;
+}
+
+.nt-card-content h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.nt-card-content p {
+  color: #777;
+  font-size: 1rem;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .nt-content {
+    min-height: auto; /* Allow content to fit without extra height */
+  }
+
+  .nt-title {
+    font-size: 2rem; /* Adjust title font size for smaller screens */
+    margin-bottom: 30px;
+  }
+
+  .nt-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for smaller screens */
+  }
+
+  .nt-card-content h2 {
+    font-size: 1.25rem; /* Adjust card title font size for smaller screens */
+  }
+
+  .nt-card-content p {
+    font-size: 0.875rem; /* Adjust card paragraph font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nt-title {
+    font-size: 1.75rem; /* Further adjust title font size for very small screens */
+    margin-bottom: 20px;
+  }
+
+  .nt-card-content h2 {
+    font-size: 1rem; /* Further adjust card title font size for very small screens */
+  }
+
+  .nt-card-content p {
+    font-size: 0.75rem; /* Further adjust card paragraph font size for very small screens */
+  }
+}
