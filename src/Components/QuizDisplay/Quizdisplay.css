@@ -146,7 +146,6 @@
   }
 
   .header-for-title {
-    width: 90%; /* Adjust width for mobile */
     padding: 1rem; /* Increase padding for mobile */
     margin-bottom: 1rem; /* Reduce margin below header for mobile */
   }
