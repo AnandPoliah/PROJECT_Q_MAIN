@@ -27,4 +27,21 @@
     right: 20px;
     cursor: pointer;
   }
+
+  @media (max-width: 767px) {
+    .modal {
+      padding: 20px;
+      border-radius: 8px;
+      width: 80%;
+    }
+  }
+  
+/* Tablet styles (768px and up) */
+@media (min-width: 768px) {
+  .modal {
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+  }
+}
   
