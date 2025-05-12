@@ -2,3 +2,4 @@ QUIZ MASTER - a ultimate quiz app which adapts to the users knowledge and also w
 
 QUIZ MASTER - it is a multiplatform web app which is coded for mobiles, tablets, and laptops, and desktops
 
+Experience the Last Version of our hosted app : https://project-q-main.vercel.app/
